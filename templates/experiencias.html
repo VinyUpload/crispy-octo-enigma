@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image-x/png" href="../static/image/icon.ico">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block content %}
+    <main class="experiencias">
+      <div class="experiencias-box">
+        <div class="minhas-experiencias">
+          <h3>Minhas experiência</h3>
+          <div class="experiencias-trabalhos">
+            <ul>
+              <li>
+                <div>
+                  <img src="../static/image/arrow.png" alt="" />
+                  <h4>2022/Atual - Assistente de TI Help Desk - ACBEU</h4>
+                </div>
+                <p>
+                  Fornecimento de suporte técnico e atendimento aos usuários,
+                  incluindo a resolução de chamados, assistência presencial e
+                  remota, bem como manutenção de notebooks e desktops.
+                </p>
+              </li>
+              <li>
+                <div>
+                  <img src="../static/image/arrow.png" alt="" />
+                  <h4>2021/2022 - Estágio de suporte de TI - Maple Bear</h4>
+                </div>
+                <p>
+                  Realização de atendimento aos usuários através de suporte
+                  técnico presencial e manutenção de computadores.
+                </p>
+              </li>
+              <li>
+                <div>
+                  <img src="../static/image/arrow.png" alt="" />
+                  <h4>2019/2021 - Estágio de suporte técnico - Martins</h4>
+                </div>
+                <p>
+                  Atendimento direto aos clientes por meio de suporte técnico
+                  presencial.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="oque-faco">
+          <h3>O que eu faço</h3>
+          <ul>
+            <li><img src="../static/image/arrow.png" alt="" />Blogs</li>
+            <li><img src="../static/image/arrow.png" alt="" />Portifólios</li>
+            <li>
+              <img src="../static/image/arrow.png" alt="" />Site de Notícias
+            </li>
+            <li>
+              <img src="../static/image/arrow.png" alt="" />Site de serviços
+            </li>
+            <li>
+              <img src="../static/image/arrow.png" alt="" />Sites Institucionais
+            </li>
+          </ul>
+          <a class="btn fourth botao" href="{{ url_for('portfolio') }}"
+            >Ver portifólios <img src="../static/image/portifolio.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="educacao-cursos-box">
+        <div class="habilidades">
+            <h3>Cursos</h3>
+            <ul>
+              <li><img src="../static/image/arrow.png" alt="">ERP</li>
+              <li><img src="../static/image/arrow.png" alt="">Capacitação técnica</li>
+              <li><img src="../static/image/arrow.png" alt="">Proteção de dados</li>
+              <li><img src="../static/image/arrow.png" alt="">Front-end</li>
+              <li><img src="../static/image/arrow.png" alt="">Pýthon</li>
+            </ul>
+        </div>
+        <div class="educacao-box">
+          <h3>Formação</h3>
+          <ul>
+            <li>
+              <div class="data">
+                <p>2019 - Atual</p>
+              </div>
+              <div class="curso">
+                <h4>Engenharia da Computação</h4>
+              </div>
+              <div class="local">
+                <p>UNIFACS</p>
+              </div>
+            </li>
+            <li>
+              <div class="data">
+                <p>2023 - Atual</p>
+              </div>
+              <div class="curso">
+                <h4>Pyhton</h4>
+              </div>
+              <div class="local">
+                <p>Alura</p>
+              </div>
+            </li>
+            <li>
+              <div class="data">
+                <p>2021 - 2023</p>
+              </div>
+              <div class="curso">
+                <h4>Desenvolvimento Web</h4>
+              </div>
+              <div class="local">
+                <p>Danki code</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="cursos-box">
+          <h3>Habilidades</h3>
+          <div class="cursos-imagens">
+            <div class="carrossel">
+              <div class="container">
+                <img src="../static/image/html-5.png" alt="HTML" />
+                <img src="../static/image/css.png" alt="CSS" />
+                <img src="../static/image/js.png" alt="JS" />
+                <img src="../static/image/react.png" alt="REACT" />
+                <img src="../static/image/python.png" alt="PYTHON" />
+                <img src="../static/image/sql.png" alt="SQL" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    {% endblock %}
+  </body>
+</html>

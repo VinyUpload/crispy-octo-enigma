@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image-x/png" href="../static/image/icon.ico">
+    <title>{% block title %}Vinicius Ferreira{% endblock %}</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-nome-container">
+                <div class="header-nome-container-img">
+                    <img src="../static/image/header-img.png" alt="">
+                </div>
+                <div class="header-nome-container-nome">
+                    <h1>Vinicius</h1>
+                    <h1>Ferreira</h1>
+                </div>
+            </div>
+            <div class="header-imagem">
+                <img src="../static/image/perfil2.png" alt="">
+                <div class="circle"></div>
+            </div>
+            <div class="header-frases">
+                <h3>Profissão:</h3>
+                <h4>Desenvolvedor Web</h4>
+            </div>
+            <div class="header-frases">
+                <h3>Localização:</h3>
+                <h4>Salvador/Ba</h4>
+            </div>
+            <div class="header-button">
+                <a class="btn2 fourth2" href="{{ url_for('sobremim') }}">Sobre mim <img src="../static/image/sobremim.png" alt=""></a>
+            </div> 
+            <div class="header-redes-sociais">
+                <div class="rede-box">
+                    <a target="_blank" href="https://www.instagram.com/vinyciusbfm?igsh=d2FuYXVicm8zc2tr"><img src="../static/image/insta.png" alt=""></a>
+                </div>
+                <div class="rede-box">
+                    <a target="_blank" href="https://www.linkedin.com/in/viniferreiram1999/"><img src="../static/image/linkedin.png" alt=""></a>
+                </div>
+                <div class="rede-box">
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=%2B5571981798029&text&type=phone_number&app_absent=0"><img src="../static/image/whatsapp.png" alt=""></a>
+                </div>
+                <div class="rede-box">
+                    <a target="_blank" href="https://github.com/ViniciusBfm"><img src="../static/image/github.png" alt=""></a>
+                </div>
+            </div>
+         
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul class="menu-desktop">
+                <li><a href="{{ url_for('pagina_inicial') }}">Home</a></li>
+                <li><a href="{{ url_for('sobremim') }}">Sobre mim</a></li>
+                <li><a href="{{ url_for('experiencias') }}">Experiências</a></li>
+                <li><a href="{{ url_for('portfolio') }}">Portfólio</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            </ul>
+            <img id="hamburger" class="menu-btn-mobile" src="../static/image/menu.png" alt="">
+            <div class="menu-box">
+                <a style="border-top-right-radius: 13px;" href="{{ url_for('pagina_inicial') }}">Home</a>
+                <a href="{{ url_for('sobremim') }}">Sobre mim</a>
+                <a href="{{ url_for('experiencias') }}">Experiências</a>
+                <a href="{{ url_for('portfolio') }}">Portfólio</a>
+                <a style="border-bottom-right-radius: 13px;" href="{{ url_for('contato') }}">Contato</a>
+            </div>
+            <a class="conversar" href="{{ url_for('contato') }}">Vamos conversar <img src="../static/image/talk.png" alt=""></a>
+        </nav>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </section>
+    <script>
+        //menu 
+        document.addEventListener('DOMContentLoaded', function() {
+            var trigger = document.getElementById('hamburger');
+            var isClosed = true;
+
+            trigger.addEventListener('click', function() {
+                burgerTime();
+                toggleMenu();
+                trigger.classList.add('animate'); // Adiciona a classe 'animate' ao botão ao clicar
+            });
+
+            function burgerTime() {
+                if (isClosed) {
+                trigger.classList.remove('is-closed');
+                trigger.classList.add('is-open');
+                isClosed = false;
+                } else {
+                trigger.classList.remove('is-open');
+                trigger.classList.add('is-closed');
+                isClosed = true;
+                }
+            }
+
+            function toggleMenu() {
+                document.querySelector('.menu-box').classList.toggle('show');
+                if (document.querySelector('.menu-box').classList.contains('show')) {
+                document.addEventListener('click', fecharMenu);
+                } else {
+                document.removeEventListener('click', fecharMenu);
+                }
+            }
+
+            function fecharMenu(event) {
+                if (!document.querySelector('.menu-box').contains(event.target) && 
+                    !document.querySelector('.menu-btn-mobile').contains(event.target)) {
+                    document.querySelector('.menu-box').classList.remove('show');
+                    // Remove o ouvinte de eventos após fechar o menu para evitar múltiplos ouvintes
+                    document.removeEventListener('click', fecharMenu);
+                }
+            }
+        });
+
+    </script>
+    <script src="{{ url_for('static', filename='js/animacao.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

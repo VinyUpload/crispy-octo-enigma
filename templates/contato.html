@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image-x/png" href="../static/image/icon.ico">
+    <title>{% block title %}Vinicius Ferreira{% endblock %}</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block content %}
+    <main class="contato">
+      <div class="contato-titulo">
+        <h3>Vamos trabalhar juntos!</h3>
+        <p>
+          Preencha o formulário abaixo ou entre em contato diretamente 
+          comigo por meio dos outros canais de comunicação.
+        </p>
+      </div>
+      <div class="contato-box">
+        <form action="/enviar_email" method="post">
+          <h3>Entre em contato comigo!</h3>
+          <div class="input-duplo-box">
+            <input placeholder="Primeiro nome" type="text" name="nome" id="" />
+            <input
+              placeholder="Sobrenome"
+              type="text"
+              name="sobrenome"
+              id=""
+            />
+          </div>
+          <div class="input-duplo-box">
+            <input placeholder="Email" type="email" name="email" id="" />
+            <input placeholder="Celular" type="tel" name="telefone" id="" />
+          </div>
+          <textarea
+            placeholder="Mensagem"
+            name="mensagem"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input
+            class="btn fourth tamanho"
+            type="submit"
+            value="Enviar mensagem"
+          />
+          <div id="mensagem">{{ mensagem }}</div>
+        </form>
+        <div class="contato-info">
+          <h3>Mais informações</h3>
+          <div class="informacoes">
+            <div class="info-box">
+              <div class="info-img">
+                <img src="../static/image/telefone.png" alt="" />
+              </div>
+              <div class="info-txt">
+                <h4>Telefone</h4>
+                <h5>(71) 9 8179-8029</h5>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="info-img">
+                <img src="../static/image/email.png" alt="" />
+              </div>
+              <div class="info-txt">
+                <h4>E-mail</h4>
+                <h5>Vinybfm@hotmail.com</h5>
+              </div>
+            </div>
+            <div class="info-redes">
+                <a href="https://www.instagram.com/vinyciusbfm?igsh=d2FuYXVicm8zc2tr"
+                ><img src="../static/image/instagram-32.png" alt=""
+              /></a>
+              <a href="https://www.linkedin.com/in/viniferreiram1999/"
+                ><img src="../static/image/linkedin-32.png" alt=""
+              /></a>
+              <a href="https://api.whatsapp.com/send/?phone=%2B5571981798029&text&type=phone_number&app_absent=0"
+                ><img src="../static/image/whatsapp-32.png" alt=""
+              /></a>
+              <a href="https://github.com/ViniciusBfm"><img src="../static/image/github-32.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    {% endblock %}
+  </body>
+</html>

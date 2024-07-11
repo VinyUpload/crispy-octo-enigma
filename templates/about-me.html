@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image-x/png" href="../static/image/icon.ico">
+    <title>{% block title %}Vinicius Ferreira{% endblock %}</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <main class="sobremim">
+        <div class="apresentacao-quemsou">
+            <h3>Olá, Me chamo <span style="color: #2850c3; font-weight: 700;">Vinicius Ferreira</span>, <br> e sou Desenvolvedor Web</h3>
+            <p>Estudante de Engenharia da Computação com um talento especial para desenvolvimento web. Minha abordagem é focada em criar soluções digitais que não apenas atendam, mas superem as expectativas dos meus clientes. Utilizo as mais recentes tecnologias e melhores práticas de desenvolvimento para garantir resultados excepcionais.</p>
+        </div>
+        <div class="apresentacao-publicoalvo">
+            <div class="mensagem-publicoalvo">
+                <h3>Transformando ideias em realidade</h3>
+                <p>Se você procura um desenvolvedor comprometido, criativo e capaz de transformar suas ideias em 
+                    realidade, estou aqui para ajudar. Vamos trabalhar juntos para alcançar seus objetivos 
+                    e criar uma presença digital excepcional que impressione e converta seu público-alvo.</p>
+            </div>
+            <div class="publico-alvo-infos">
+                <div class="publico-alvo-infos-box">
+                    <div class="anos">2+</div>
+                    <div class="texto">Anos de experiência</div>
+                </div>
+                <div class="publico-alvo-infos-box">
+                    <div class="anos">15+</div>
+                    <div class="texto">Total de projetos</div>
+                </div>
+            </div>
+        </div>  
+        <div class="conhecimentos">
+            <div class="linguagens">
+                <h3>Principais linguagens</h3>
+                <ul>
+                    <li><img src="../static/image/arrow.png" alt="">Html</li>
+                    <li><img src="../static/image/arrow.png" alt="">CSS</li>
+                    <li><img src="../static/image/arrow.png" alt="">JavaScript</li>
+                    <li><img src="../static/image/arrow.png" alt="">Python</li>
+                    <li><img src="../static/image/arrow.png" alt="">SQL</li>
+                </ul>
+            </div>
+            <div class="vamosconversar">
+                <h3>Vamos trabalhar juntos</h3>
+                <a href="{{ url_for('contato') }}">Clique aqui! <img src="../static/image/seta-direita.png" alt=""> </a>
+            </div>
+        </div>        
+    </main>
+    {% endblock %}
+
+    
+</body>
+</html>
